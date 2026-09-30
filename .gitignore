@@ -1,0 +1,31 @@
+# Secrets — real .env never committed; .env.example is the template
+.env
+.env.*
+!.env.example
+
+# Local state (may hold real names/VINs once running against a live cabinet)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+prisma/*.db*
+
+# Local-only fixture overlays (e.g. pitch-specific naming) — never committed
+fixtures.local/
+
+# Recorded live API responses — scrub before promoting anything to fixtures/
+recordings/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs & OS
+*.log
+npm-debug.log*
+.DS_Store
